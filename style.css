@@ -3,17 +3,17 @@
 body {
     margin: 0;
     padding: 0;
-    display: flex; /* Make body a flex container */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertical centering */
-    align-items: center;     /* Horizontal centering */
-    height: 100vh;           /* Full viewport height */
-    overflow: hidden;        /* Remove scroll */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
     background: url('bg.png') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Squid Game', sans-serif;
-    text-align: center;
     color: white;
+    text-align: center;
 }
 
 h1 {
@@ -47,4 +47,20 @@ h1 {
 .cell:hover {
     transform: scale(1.1);
     box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+}
+
+a.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 24px;
+    background-color: #E50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #FF3131;
 }
