@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Squid+Game&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('bg.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Squid Game', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-y: auto; /* Enable scrolling */
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+}
+
+/* Players List */
+.players-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.players-list li {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid #00704A;
+    color: white;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.players-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Highlight Eliminated Players */
+.players-list li.eliminated {
+    border-left-color: #FF3131;
+    text-decoration: line-through;
+    color: #FF3131;
+}
+
+/* Button */
+a.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 24px;
+    background-color: #E50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #FF3131;
+}
