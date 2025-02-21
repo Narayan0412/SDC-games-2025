@@ -21,15 +21,17 @@ h1 {
     margin: 0 0 20px 0;
 }
 
+/* 💻 Default Grid: 8x4 for Laptops/Desktops */
 .grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr); /* 8 columns */
     grid-gap: 20px;
     width: fit-content;
     padding: 10px;
     justify-content: center;
 }
 
+/* Grid Cell Styling */
 .cell {
     width: 100px;
     height: 100px;
@@ -49,6 +51,7 @@ h1 {
     box-shadow: 0 0 25px rgba(255, 0, 0, 1);
 }
 
+/* Button Styling */
 a.btn {
     display: inline-block;
     margin: 20px 0;
@@ -63,4 +66,27 @@ a.btn {
 
 a.btn:hover {
     background-color: #FF3131;
+}
+
+/* 📱 Responsive Grid: 4x8 for Phones/Tablets */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Switch to 4 columns */
+        grid-gap: 10px;
+    }
+
+    .cell {
+        width: 60px; /* Slightly smaller cells for mobile */
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    a.btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
