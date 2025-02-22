@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card View</title>
+  <link rel="stylesheet" href="card-style.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-btn">← Back</a>
+
+  <!-- Card Container -->
+  <div id="cardContainer">
+    <div class="bg">
+      <h1 id="player-name">PLAYER_</h1>
+    </div>
+    <div class="nft">
+      <div class='main'>
+        <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+        <h2 id="player-real-name">Loading...</h2>
+        <p class='description'>Winner of SDC Games 2024</p>
+        <div class='tokenInfo'>
+          <div class="price">
+            <ins>◘</ins>
+            <p id="team-number">Team </p>
+          </div>
+          <div class="duration">
+            <ins>#</ins>
+            <p id="player-number"></p>
+          </div>
+        </div>
+        <hr />
+        <div class='creator'>
+          <div class='wrapper'>
+            <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+          </div>
+          <p>SDC</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to get URL parameters
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Get values from the URL
+    const playerNumber = getQueryParam('number');
+    const playerName = getQueryParam('name') || 'Unknown Player';
+    const teamNumber = getQueryParam('team') || 'Unknown';
+
+    // Update the card details dynamically
+    if (playerNumber) {
+        document.getElementById('player-name').innerText = `PLAYER_${playerNumber}`;
+        document.getElementById('player-real-name').innerText = playerName;
+        document.getElementById('team-number').innerText = `Team ${teamNumber}`;
+        document.getElementById('player-number').innerText = playerNumber;
+    } else {
+        document.getElementById('player-name').innerText = 'PLAYER_UNKNOWN';
+        document.getElementById('player-real-name').innerText = 'No Data Found';
+        document.getElementById('team-number').innerText = 'No Team';
+        document.getElementById('player-number').innerText = 'N/A';
+    }
+  </script>
+
+</body>
+</html>
